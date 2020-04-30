@@ -1,0 +1,19 @@
+[{
+  "_id": 1,
+  "name": "ROOT",
+  "parent_category_id": null,
+  "child_categories": [
+    2,
+    3
+  ]
+},{
+  "_id": 2,
+  "name": "LIVING",
+  "parent_category_id": 1,
+  "child_categories": []
+},{
+  "_id": 3,
+  "name": "UNLIVING",
+  "parent_category_id": 1,
+  "child_categories": []
+}]
