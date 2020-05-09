@@ -1,4 +1,5 @@
 import pymongo
+from pymongo.errors import WriteError
 
 
 class Connection:
@@ -22,3 +23,40 @@ class Connection:
 
         except ValueError:
             print("Connection failed")
+
+    def add_ingredient(self, name, belongs_categories, nutritional_info):
+
+        try:
+            ingredient_document = {
+                "name": name,
+                "belongs_categories": belongs_categories,
+                "energy": nutritional_info[0],
+                "protein": nutritional_info[1],
+                "sugar": nutritional_info[2],
+                "fibre": nutritional_info[3],
+                "other_carbohydrates": nutritional_info[4],
+                "saturated_fat": nutritional_info[5],
+                "polyunsaturated_fat": nutritional_info[6],
+                "monounsaturated_fat": nutritional_info[7],
+                "sodium": nutritional_info[8]
+            }
+
+            self.ingredients.insert_one(ingredient_document)
+            print('Incredient ' + name + ' added successfully to database')
+        except (IndexError, TypeError, ValueError):
+            print('Failed to add ' + name + ' to database')
+            return False
+
+        return True
+
+    def delete_ingredient(self):
+        pass
+
+    def edit_ingredient(self):
+        pass
+
+    def search_ingredient(self, ingredient_id):
+        pass
+
+    def get_all_ingredients(self):
+        pass
