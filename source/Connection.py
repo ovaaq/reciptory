@@ -10,7 +10,8 @@ class Connection:
         host -- used host for the database connection
         port -- used port for the database connection
         user -- optional. user for the database connection
-        password -- optional user password for the database connection
+        password -- optional. user password for the database connection
+        database_name -- optional. database name you prefer to use
         """
         if len(password) > 0 and len(user) > 0:
             url = "mongodb://%s:%s@%s:%s" % (user, password, host, port)
