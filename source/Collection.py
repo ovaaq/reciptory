@@ -3,7 +3,7 @@ from bson import ObjectId
 
 class Collection:
 
-    def __init__(self, connection, collection_name, ):
+    def __init__(self, connection, collection_name):
         """Constructor
 
         Keyword arguments:
@@ -11,6 +11,7 @@ class Collection:
         collection_name -- collection name in the database
         """
         self.collection = connection.db.get_collection(collection_name)
+        self.name = collection_name
 
     def verify(self, document):
         """Verifies that document is appropriately
@@ -19,9 +20,39 @@ class Collection:
         Keyword arguments:
         document -- document object to verify
         """
-        pass
+        control_object = self.get()
+        for attribute in control_object:
+            if attribute == "_id":
+                continue
 
-    def get(self, id):
+            control_type = control_object.get(attribute)
+            document_type = document.get(attribute)
+
+            if document_type is None:
+                print('Document is missing attribute ' + attribute)
+                return False
+
+            if isinstance(control_type, str):
+                if not isinstance(document_type, str):
+                    print('Document\'s attribute "' + attribute + '" should have type "str" currently is "'
+                          + document_type.__str__() + '"')
+                    return False
+
+            if isinstance(control_object.get(attribute), list):
+                if not isinstance(document_type, list):
+                    print('Document\'s attribute "' + attribute + '" should have type "list" currently is "'
+                          + document_type.__str__() + '"')
+                    return False
+
+            if isinstance(control_type, int) or isinstance(control_type, float):
+                if not (isinstance(document_type, int) or isinstance(document_type, float)):
+                    print('Document\'s attribute "' + attribute + '" should be type "int" or "float" currently is "'
+                          + document_type.__str__() + '"')
+                    return False
+
+        return True
+
+    def get(self, object_id='random'):
         """Returns matching ingredient from the database.
         If fetching fails returns None.
 
@@ -29,10 +60,17 @@ class Collection:
         ingredient_id -- database id for the object
         """
         try:
-            tmp = self.collection.find_one({'_id': ObjectId(id)})
-            print('Ingredient ' + tmp.get('name') + ' was fetched successfully')
+            if object_id != 'random':
+                tmp = self.collection.find_one({'_id': ObjectId(object_id)})
+            else:
+                tmp = self.collection.find_one({})
+
+            if tmp is None:
+                print('There was no object with id "' + object_id + '" in the collection "' + self.name + '"')
+                return tmp
+            print('Object with id "' + object_id + '" from the collection "' + self.name + '" was fetched successfully')
         except:
-            print('Ingredient fetch failed')
+            print('Failed to fetch from the collection "' + self.name + '"')
             return None
 
         return tmp
@@ -43,9 +81,12 @@ class Collection:
         """
         try:
             tmp = self.collection.find({})
-            print('Ingredients were fetched successfully')
+            if tmp is None:
+                print('There was no objects in the collection "' + self.name + '"')
+                return tmp
+            print('Objects from the collection "' + self.name + '" were fetched successfully')
         except:
-            print('Ingredients fetch failed')
+            print('Failed to fetch from the collection "' + self.name + '"')
             return None
 
         return tmp
@@ -59,14 +100,14 @@ class Collection:
         """
         try:
             self.collection.insert_one(document)
-            print('Ingredient ' + document.get('name') + ' added successfully to database')
+            print('Object was added successfully to the collection "' + self.name + '"')
         except:
-            print('Failed to add  ' + document.get('name') + ' to database')
+            print('Failed to add object to the collection "' + self.name + '"')
             return False
 
         return True
 
-    def delete(self, id):
+    def delete(self, object_id):
         """Tries to delete an ingredient from the database and
         returns boolean about outcome.
 
@@ -74,15 +115,15 @@ class Collection:
         ingredient_id -- database id for the ingredient object
         """
         try:
-            self.collection.delete_one({"_id": ObjectId(id)})
-            print('Ingredient with id ' + id + ' is now deleted')
+            self.collection.delete_one({"_id": ObjectId(object_id)})
+            print('Object with id ' + object_id + ' was deleted successfully from the collection "' + self.name + '"')
         except:
-            print('Failed to delete item with id ' + id)
+            print('Failed to delete object to the collection "' + self.name + '"')
             return False
 
         return True
 
-    def edit(self, id, document):
+    def edit(self, object_id, document):
         """Tries to edit an ingredient from the database and
         returns boolean about outcome.
 
@@ -91,10 +132,10 @@ class Collection:
         ingredient_id -- database id for the ingredient object
         """
         try:
-            self.collection.find_and_modify({"_id": ObjectId(id)}, {"$set": document}, upsert=True)
-            print('Ingredient ' + document.get("name") + ' was successfully edited in database')
+            self.collection.find_and_modify({"_id": ObjectId(object_id)}, {"$set": document}, upsert=True)
+            print('Object with id ' + object_id + ' was edited successfully in the collection "' + self.name + '"')
         except:
-            print('Failed to edit to database')
+            print('Failed to edit object in the collection "' + self.name + '"')
             return False
 
         return True

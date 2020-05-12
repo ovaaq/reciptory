@@ -1,16 +1,16 @@
 from source.Connection import Connection
 
 # testing the instance of Connection class
-from source.Collection import Ingredient
+from source.Collection import Collection
 
 c = Connection()
-i = Ingredient(c)
+i = Collection(c,'ingredients')
 
 ingredient_document = {
-    "name": "asdasdasd",
-    "belongs_categories": [1, 2, 3],
-    "energy": 0,
-    "protein": 0,
+    "name": "moi",
+    "belongs_categories": [2,1],
+    "energy": 0.1111,
+    "protein": 2.332,
     "sugar": 0,
     "fibre": 0,
     "other_carbohydrates": 0,
@@ -19,5 +19,4 @@ ingredient_document = {
     "monounsaturated_fat": 1,
     "sodium": 0
 }
-i.edit('5eb7b3e6e333c1bef7e2bb2d', ingredient_document)
-print(i.get('5eb7b3e6e333c1bef7e2bb2d'))
+print(i.verify(ingredient_document))
