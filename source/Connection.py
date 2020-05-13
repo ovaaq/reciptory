@@ -14,16 +14,19 @@ class Connection:
         database_name -- optional. database name you prefer to use
         """
         if len(password) > 0 and len(user) > 0:
-            url = "mongodb://%s:%s@%s:%s" % (user, password, host, port)
+            url = "mongodb+srv://%s:%s@%s" % (user, password, host)
         else:
-            url = "mongodb://%s:%s" % (host, port)
+            url = "mongodb+srv://%s" % (host, port)
+
+        if len(port) > 0:
+            url = url + ':' + port
 
         try:
             client = pymongo.MongoClient(url)
-            print("Connected to " + url)
 
             # creates database or just connects if already there
             self.db = client.get_database(database_name)
+            print(client.list_database_names())
 
-        except:
+        except (pymongo.errors.OperationFailure, ValueError):
             print("Connection failed")

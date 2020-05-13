@@ -68,7 +68,8 @@ class Collection:
             if tmp is None:
                 print('There was no object with id "' + object_id + '" in the collection "' + self.name + '"')
                 return tmp
-            print('Object with id "' + object_id + '" from the collection "' + self.name + '" was fetched successfully')
+            print('Object with id "' + object_id + '" from the collection "'
+                  + self.name + '" was fetched successfully')
         except:
             print('Failed to fetch from the collection "' + self.name + '"')
             return None
@@ -99,8 +100,9 @@ class Collection:
         ingredient_document -- dictionary for the ingredient object
         """
         try:
-            self.collection.insert_one(document)
-            print('Object was added successfully to the collection "' + self.name + '"')
+            object_id = self.collection.insert_one(document).inserted_id
+            print('Object with id "' + object_id.__str__()
+                  + '" was added successfully to the collection "' + self.name + '"')
         except:
             print('Failed to add object to the collection "' + self.name + '"')
             return False
@@ -116,7 +118,8 @@ class Collection:
         """
         try:
             self.collection.delete_one({"_id": ObjectId(object_id)})
-            print('Object with id ' + object_id + ' was deleted successfully from the collection "' + self.name + '"')
+            print('Object with id ' + object_id
+                  + ' was deleted successfully from the collection "' + self.name + '"')
         except:
             print('Failed to delete object to the collection "' + self.name + '"')
             return False

@@ -4,10 +4,11 @@ from source.Connection import Connection
 from source.Collection import Collection
 
 c = Connection()
+
 i = Collection(c,'ingredients')
 
 ingredient_document = {
-    "name": "moi",
+    "name": "kana",
     "belongs_categories": [2,1],
     "energy": 0.1111,
     "protein": 2.332,
@@ -19,4 +20,10 @@ ingredient_document = {
     "monounsaturated_fat": 1,
     "sodium": 0
 }
-print(i.verify(ingredient_document))
+
+i.add(ingredient_document)
+
+x = i.get_all()
+
+for y in x:
+    print(y)
