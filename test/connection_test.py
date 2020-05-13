@@ -4,7 +4,6 @@ from source.Connection import Connection
 from source.Collection import Collection
 
 c = Connection()
-
 i = Collection(c,'ingredients')
 
 ingredient_document = {
