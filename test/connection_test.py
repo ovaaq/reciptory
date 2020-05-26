@@ -1,14 +1,9 @@
-from source.Connection import Connection
-
 # testing the instance of Connection class
-from source.Collection import Collection
-
-c = Connection()
-i = Collection(c,'ingredients')
+from source.API import Verify
 
 ingredient_document = {
     "name": "kana",
-    "belongs_categories": [2,1],
+    "belongs_categories": [{"$oid":"2"},{"$oid":"2"}],
     "energy": 0.1111,
     "protein": 2.332,
     "sugar": 0,
@@ -17,12 +12,7 @@ ingredient_document = {
     "saturated_fat": 0,
     "polyunsaturated_fat": 1,
     "monounsaturated_fat": 1,
-    "sodium": 0
+    "sodium": 0,
 }
 
-i.add(ingredient_document)
-
-x = i.get_all()
-
-for y in x:
-    print(y)
+print(Verify.ingredient(ingredient_document))
