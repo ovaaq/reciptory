@@ -24,11 +24,11 @@ class Schemas:
             "belongs_categories": {
                 "type": "array",
                 "items": {
-                        "type": "object",
-                        "properties": {
-                            "$oid": {"type": "string"}
-                        },
-                        "required": ["$oid"]
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    },
+                    "required": ["$oid"]
                 }
             }
         },
@@ -36,10 +36,116 @@ class Schemas:
                      "polyunsaturated_fat", "monounsaturated_fat", "sodium", "belongs_categories"]
     }
 
+    ingredient_category = {
+        "title": "Ingredient Category",
+        "properties": {
+            "_id": {
+                "type": "object",
+                "properties": {
+                    "$oid": {
+                        "type": "string"
+                    }
+                }
+            },
+            "name": {"type": "string"},
+            "parent_category": {
+                "type": "object",
+                "properties": {
+                    "$oid": {
+                        "type": "string"
+                    }
+                }
+            },
+            "child_categories": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    },
+                    "required": ["$oid"]
+                }
+            }
+        },
+        "required": ["name", "parent_category", "child_categories"]
+    }
+
+    method = {
+        "title": "Method",
+        "properties": {
+            "_id": {
+                "type": "object",
+                "properties": {
+                    "$oid": {
+                        "type": "string"
+                    }
+                }
+            },
+            "belongs_categories": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    },
+                    "required": ["$oid"]
+                }
+            },
+            "name": {"type": "string"},
+            "definition": {"type": "string"},
+            "parameters": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "param_type": {"type": "string"},
+                        "name": {"type": "string"},
+                        "options": {"type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                        },
+                        "variable": {"type": ["string", "number", "boolean"]}
+                    }
+                },
+                "required": ["$oid"]
+            }
+        },
+        "required": ["name", "belongs_categories", "definition", "parameters"]
+    }
+
+    method_category = {
+        "title": "Method Category",
+        "properties": {
+            "_id": {
+                "type": "object",
+                "properties": {
+                    "$oid": {
+                        "type": "string"
+                    }
+                }
+            },
+            "name": {"type": "string"},
+            "definition": {"type": "string"},
+        },
+        "required": ["name", "definition"]
+    }
+
     recipe = {}
 
-    ingredient_category = {}
-
-    method = {}
-
-    method_category = {}
+    recipe_category = {
+        "title": "Recipe Category",
+        "properties": {
+            "_id": {
+                "type": "object",
+                "properties": {
+                    "$oid": {
+                        "type": "string"
+                    }
+                }
+            },
+            "name": {"type": "string"},
+            "definition": {"type": "string"},
+        },
+        "required": ["name", "definition"]
+    }

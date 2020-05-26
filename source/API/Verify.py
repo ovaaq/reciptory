@@ -31,6 +31,16 @@ def recipe(document):
     return verify(document, Schemas.recipe)
 
 
+def recipe_category(document):
+    """Verifies that recipe category is appropriately
+    formatted. Returns boolean.
+
+    Keyword arguments:
+    document -- document object to verify
+    """
+    return verify(document, Schemas.recipe_category)
+
+
 def ingredient(document):
     """Verifies that ingredient is appropriately
     formatted. Returns boolean.
@@ -69,3 +79,5 @@ def method_category(document):
     document -- document object to verify
     """
     return verify(document, Schemas.method_category)
+
+
