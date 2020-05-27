@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 # testing the instance of Connection class
 from source.API import Verify
 

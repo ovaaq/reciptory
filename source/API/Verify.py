@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import jsonschema
 from jsonschema import validate
 from source.API.Schemas import Schemas

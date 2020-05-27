@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+
 class Schemas:
 
     ingredient = {
@@ -107,7 +110,7 @@ class Schemas:
                                     "items": {
                                         "type": "string"
                                     }
-                        },
+                                    },
                         "variable": {"type": ["string", "number", "boolean"]}
                     }
                 },
@@ -175,7 +178,7 @@ class Schemas:
                             }
                         },
                         "amount": {"type": "number"},
-                        "unit" : {"type": "string"}
+                        "unit": {"type": "string"}
                     },
                     "required": ["$oid"]
                 }
@@ -243,7 +246,7 @@ class Schemas:
             },
 
         },
-        "required": ["_id", "name","intro", "recipe_categories", "ingredients", "methods", "steps"]
+        "required": ["_id", "name", "intro", "recipe_categories", "ingredients", "methods", "steps"]
     }
 
     recipe_category = {

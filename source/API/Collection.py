@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from bson import ObjectId
 
 
@@ -12,45 +14,6 @@ class Collection:
         """
         self.collection = connection.db.get_collection(collection_name)
         self.name = collection_name
-
-    def verify(self, document):
-        """Verifies that document is appropriately
-        formed. Returns boolean about the verification.
-
-        Keyword arguments:
-        document -- document object to verify
-        """
-        control_object = self.get()
-        for attribute in control_object:
-            if attribute == "_id":
-                continue
-
-            control_type = control_object.get(attribute)
-            document_type = document.get(attribute)
-
-            if document_type is None:
-                print('Document is missing attribute ' + attribute)
-                return False
-
-            if isinstance(control_type, str):
-                if not isinstance(document_type, str):
-                    print('Document\'s attribute "' + attribute + '" should have type "str" currently is "'
-                          + document_type.__str__() + '"')
-                    return False
-
-            if isinstance(control_object.get(attribute), list):
-                if not isinstance(document_type, list):
-                    print('Document\'s attribute "' + attribute + '" should have type "list" currently is "'
-                          + document_type.__str__() + '"')
-                    return False
-
-            if isinstance(control_type, int) or isinstance(control_type, float):
-                if not (isinstance(document_type, int) or isinstance(document_type, float)):
-                    print('Document\'s attribute "' + attribute + '" should be type "int" or "float" currently is "'
-                          + document_type.__str__() + '"')
-                    return False
-
-        return True
 
     def get(self, object_id='random'):
         """Returns matching ingredient from the database.
