@@ -2,6 +2,7 @@
 from source.API import Verify
 
 ingredient_document = {
+    "_id": {"$oid": "placeholder"},
     "name": "kana",
     "belongs_categories": [{"$oid":"2"},{"$oid":"2"}],
     "energy": 0.1111,
@@ -14,5 +15,7 @@ ingredient_document = {
     "monounsaturated_fat": 1,
     "sodium": 0,
 }
+
+ingredient_document["_id"]["$oid"] = "new_id"
 
 print(Verify.ingredient(ingredient_document))
