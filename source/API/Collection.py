@@ -15,7 +15,7 @@ class Collection:
         self.collection = connection.db.get_collection(collection_name)
         self.name = collection_name
 
-    def get(self, object_id='random'):
+    def get(self, object_id=None):
         """Returns matching ingredient from the database.
         If fetching fails returns None.
 
@@ -23,18 +23,13 @@ class Collection:
         ingredient_id -- database id for the object
         """
         try:
-            if object_id != 'random':
+            if object_id is not None:
                 tmp = self.collection.find_one({'_id': ObjectId(object_id)})
-            else:
-                tmp = self.collection.find_one({})
 
-            if tmp is None:
-                print('There was no object with id "' + object_id + '" in the collection "' + self.name + '"')
-                return tmp
             print('Object with id "' + object_id + '" from the collection "'
                   + self.name + '" was fetched successfully')
         except:
-            print('Failed to fetch from the collection "' + self.name + '"')
+            print('There was no object with id "' + object_id + '" in the collection "' + self.name + '"')
             return None
 
         return tmp
