@@ -1,1 +1,67 @@
- 
+INGREDIENT
+
+{
+    "_id": {
+            "$oid": "5ebaa6ace1e9db12bc5fe71f"
+        },
+    "name": "raw chicken breast",
+    "energy": 114.0,
+    "protein": 21.2,
+    "sugar": 0.0,
+    "fibre": 0.0,
+    "other_carbohydrates": 0.0,
+    "saturated_fat": 0.6,
+    "monounsaturated_fat": 0.8,
+    "polyunsaturated_fat": 0.4,
+    "sodium": 0.116,
+    "belongs_categories": [
+        {
+            "$oid": "5ebaa6ace1e9db12bc5fe71f"
+        },
+        {
+            "$oid": "5ebaa74c00f2cddc8aa198de"
+        }
+    ]
+}
+
+
+INGREDIENT CATEGORY
+
+{
+    "_id": {
+            "$oid": "5ebaa6ace1e9db12bc5fe71f"
+        },
+    "name": "chicken",
+    "parent_category": {
+        "$oid": "5ebaa6ace1e9db12bc5fe71f"
+    },
+    "child_categories": [{
+            "$oid": "5ebaa6ace1e9db12bc5fe71f"
+        },
+        {
+            "$oid": "5ebaa74c00f2cddc8aa198de"
+        }
+    ]
+}
+
+
+METHOD CATEGORY
+
+{
+    "_id": {
+            "$oid": "5ebaa6ace1e9db12bc5fe71f"
+        },
+    "name": "dry-heat",
+    "definition": "Dry heat cooking refers to any cooking technique where the heat is transferred to the food item without using extra moisture. This method typically involves high temperatures 300 C or hotter."
+}
+
+
+RECIPE CATEGORY
+
+{
+    "_id": {
+            "$oid": "5ebaa6ace1e9db12bc5fe71f"
+        },
+    "name": "dessert",
+    "definition": "A usually sweet course or dish, as of fruit, ice cream, or pastry, served at the end of a meal."
+}
