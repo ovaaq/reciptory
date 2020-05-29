@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 
 # testing the instance of Connection class
-from source.API import Verify
+from source.API import verify
 
 ingredient_document = {
-    "_id": {"$oid": "placeholder"},
     "name": "kana",
-    "belongs_categories": [{"$oid":"2"},{"$oid":"2"}],
     "energy": 0.1111,
     "protein": 2.332,
     "sugar": 0,
@@ -16,8 +14,12 @@ ingredient_document = {
     "polyunsaturated_fat": 1,
     "monounsaturated_fat": 1,
     "sodium": 0,
+    "belongs_categories": [{
+        "$oid": "5ebaa6ace1e9db12bc5fe71f"
+    }, {
+        "$oid": "5ebaa74c00f2cddc8aa198de"
+    }]
 }
 
-ingredient_document["_id"]["$oid"] = "new_id"
 
-print(Verify.ingredient(ingredient_document))
+print(verify.ingredient(ingredient_document))

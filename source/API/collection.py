@@ -25,6 +25,9 @@ class Collection:
         try:
             if object_id is not None:
                 tmp = self.collection.find_one({'_id': ObjectId(object_id)})
+            if tmp is None:
+                print('There was no object with id "' + object_id + '" in the collection "' + self.name + '"')
+                return None
 
             print('Object with id "' + object_id + '" from the collection "'
                   + self.name + '" was fetched successfully')
@@ -40,9 +43,9 @@ class Collection:
         """
         try:
             tmp = self.collection.find({})
-            if tmp is None:
+            if tmp.count() < 1:
                 print('There was no objects in the collection "' + self.name + '"')
-                return tmp
+                return None
             print('Objects from the collection "' + self.name + '" were fetched successfully')
         except:
             print('Failed to fetch from the collection "' + self.name + '"')
@@ -93,7 +96,7 @@ class Collection:
         ingredient_id -- database id for the ingredient object
         """
         try:
-            self.collection.find_and_modify({"_id": ObjectId(object_id)}, {"$set": document}, upsert=True)
+            self.collection.update({"_id": ObjectId(object_id)}, document)
             print('Object with id ' + object_id + ' was edited successfully in the collection "' + self.name + '"')
         except:
             print('Failed to edit object in the collection "' + self.name + '"')
