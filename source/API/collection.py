@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from bson import ObjectId
+from bson.json_util import loads, dumps
 
 
 class Collection:
@@ -53,7 +54,7 @@ class Collection:
 
         return tmp
 
-    def add(self, document):
+    def add(self, data):
         """Tries to add an ingredient to the database and
         returns boolean about outcome.
 
@@ -61,6 +62,7 @@ class Collection:
         ingredient_document -- dictionary for the ingredient object
         """
         try:
+            document = loads(dumps(data))
             object_id = self.collection.insert_one(document).inserted_id
             print('Object with id "' + object_id.__str__()
                   + '" was added successfully to the collection "' + self.name + '"')
@@ -87,7 +89,7 @@ class Collection:
 
         return True
 
-    def edit(self, object_id, document):
+    def edit(self, object_id, data):
         """Tries to edit an ingredient from the database and
         returns boolean about outcome.
 
@@ -96,6 +98,7 @@ class Collection:
         ingredient_id -- database id for the ingredient object
         """
         try:
+            document = loads(dumps(data))
             self.collection.update({"_id": ObjectId(object_id)}, document)
             print('Object with id ' + object_id + ' was edited successfully in the collection "' + self.name + '"')
         except:

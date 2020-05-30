@@ -163,7 +163,7 @@ method_schema = {
                             "par_type",
                             "options"
                         ],
-                        "additionalProperties": true,
+                        "additionalProperties": True,
                         "properties": {
                             "par_type": {
                                 "$id": "#/properties/parameters/items/anyOf/0/properties/par_type",
