@@ -41,5 +41,5 @@ As a Back-End solution there Python Flask with MongoDB. It contains also JSON sc
 
 
 ## Front-End
-This side of the project will be produced with Vue.js and Bulma. Neomorphism will be used to extend to style the Front-End.
+This side of the project will be produced with Vue.js and Bulma. Neomorphism will be used to some extend for style.
 
