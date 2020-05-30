@@ -11,7 +11,7 @@ Repository for standardized recipes with database for ingredients and cooking me
 Would it be nice if recipes were precise, well defined and standardized? You could understand any recipe straight away and find all the definitions for different cooking methods and dish categories. Recipes would be formatted with standardized language and there would be also possibility to find nutritional information for ingredients and recipes.
 
 ## REST API
-As a Back-End solution there is Python Flask with MongoDB. It contains also JSON schema validator functions, which make sure that there is no malformed documents going in. You can check all valid database object examples [here](https://github.com/ovaaq/reciptory/blob/master/doc/database_examples.txt). Here you can see examples how ingredient transactions work and what kind of object ingredients are. Read more about the REST API in the documentation [here](https://github.com/ovaaq/reciptory/blob/master/doc/REST_API.md).
+As a Back-End solution there is Python Flask with MongoDB. It contains also JSON schema validator functions, which make sure that there is no malformed documents going in. You can check all valid database object examples [here](https://github.com/ovaaq/reciptory/blob/master/doc/database_examples.md). Here you can see examples how ingredient transactions work and what kind of object ingredients are. Read more about the REST API in the documentation [here](https://github.com/ovaaq/reciptory/blob/master/doc/REST_API.md).
 
 
 
