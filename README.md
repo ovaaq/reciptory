@@ -11,8 +11,11 @@ Repository for standardized recipes with database for ingredients and cooking me
 Would it be nice if recipes were precise, well defined and standardized? You could understand any recipe straight away and find all the definitions for different cooking methods and dish categories. Recipes would be formatted with standardized language and there would be also possibility to find nutritional information for ingredients and recipes.
 
 ## REST API
-As a Back-End solution there is Python Flask with MongoDB. It contains also JSON schema validator functions, which make sure that there is no malformed documents going in. You can check the valid examples in `doc/database_examples.txt` Here you can see an example how to ingredient transactions works. Read more in the documentation [here](https://github.com/ovaaq/reciptory/blob/master/doc/REST_API.md).
-### Ingredient
+As a Back-End solution there is Python Flask with MongoDB. It contains also JSON schema validator functions, which make sure that there is no malformed documents going in. You can check all valid database object examples [here](https://github.com/ovaaq/reciptory/blob/master/doc/database_examples.txt). Here you can see examples how ingredient transactions work and what kind of object ingredients are. Read more about the REST API in the documentation [here](https://github.com/ovaaq/reciptory/blob/master/doc/REST_API.md).
+
+
+
+### Ingredient Transactions
 | verb | Path | Action | Description |
 | :---: | :---: | :---: | :---: |
 | `GET` | `api/ingredient/` | index | get a list of all ingredients |
@@ -20,6 +23,34 @@ As a Back-End solution there is Python Flask with MongoDB. It contains also JSON
 | `GET` | `api/ingredient/<id>` | index | get a specific ingredient |
 | `PUT` | `api/ingredient/<id>` | edit | edit existing ingredient |
 | `DELETE` | `api/ingredient/<id>` | destroy | destroy a specific ingredient |
+
+### Ingredient Object in Database
+
+```json
+{
+    "_id": {
+            "$oid": "5ebaa6ace1e9db12bc5fe71f"
+        },
+    "name": "raw chicken breast",
+    "energy": 114.0,
+    "protein": 21.2,
+    "sugar": 0.0,
+    "fibre": 0.0,
+    "other_carbohydrates": 0.0,
+    "saturated_fat": 0.6,
+    "monounsaturated_fat": 0.8,
+    "polyunsaturated_fat": 0.4,
+    "sodium": 0.116,
+    "belongs_categories": [
+        {
+            "$oid": "5ebaa6ace1e9db12bc5fe71f"
+        },
+        {
+            "$oid": "5ebaa74c00f2cddc8aa198de"
+        }
+    ]
+}
+```
 
 ## Front-End
 This side of the project will be produced with Vue.js and Bulma. Neomorphism will be used to some extend for style.
