@@ -11,34 +11,15 @@ Repository for standardized recipes with database for ingredients and cooking me
 Would it be nice if recipes were precise, well defined and standardized? You could understand any recipe straight away and find all the definitions for different cooking methods and dish categories. Recipes would be formatted with standardized language and there would be also possibility to find nutritional information for ingredients and recipes.
 
 ## REST API
-As a Back-End solution there is Python Flask with MongoDB. It contains also JSON schema validator functions, which make sure that there is no malformed documents going in. You can check the valid examples in `doc/database_examples.txt` Here you can see what urls are used.
-
-`api/ingredient/` to GET all the ingredients or PUT a new one
-
-`api/ingredient/<id>` to GET, PUT or DELETE a spesific ingredient
-
-`api/ingredient_cateogry/` to GET all the ingredient categories or PUT a new one
-
-`api/ingredient_cateogry/<id>` to GET, PUT or DELETE a spesific ingredient category
-
-`api/method/` to GET all the cooking methods or PUT a new one
-
-`api/method/<id>` to GET, PUT or DELETE a spesific cooking method
-
-`api/method_category/` to GET all the cooking method categories or PUT a new one
-
-`api/method_category/<id>` to GET, PUT or DELETE a spesific cooking method category
-
-`api/recipe/` to GET all the recipes or PUT a new one
-
-`api/recipe/<id>` to GET, PUT or DELETE a spesific recipe
-
-`api/recipe_cateogory/` to GET all the recipe categories or PUT a new one
-
-`api/recipe_cateogory/<id>` to GET, PUT or DELETE a spesific recipe category
-
-
-
+As a Back-End solution there is Python Flask with MongoDB. It contains also JSON schema validator functions, which make sure that there is no malformed documents going in. You can check the valid examples in `doc/database_examples.txt` Here you can see an example how to ingredient transactions works. Read more in the documentation [here](https://github.com/ovaaq/reciptory/blob/master/doc/REST_API.md).
+### Ingredient
+| verb | Path | Action | Description |
+| :---: | :---: | :---: | :---: |
+| `GET` | `api/ingredient/` | index | get a list of all ingredients |
+| `PUT` | `api/ingredient/` | create | create a new ingredient |
+| `GET` | `api/ingredient/<id>` | index | get a specific ingredient |
+| `PUT` | `api/ingredient/<id>` | edit | edit existing ingredient |
+| `DELETE` | `api/ingredient/<id>` | destroy | destroy a specific ingredient |
 
 ## Front-End
 This side of the project will be produced with Vue.js and Bulma. Neomorphism will be used to some extend for style.
