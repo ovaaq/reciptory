@@ -1,5 +1,6 @@
-INGREDIENT
+## Ingredient
 
+```json
 {
     "_id": {
             "$oid": "5ebaa6ace1e9db12bc5fe71f"
@@ -23,9 +24,11 @@ INGREDIENT
         }
     ]
 }
+```
 
+## Ingredient Category
 
-INGREDIENT CATEGORY
+```json
 
 {
     "_id": {
@@ -43,18 +46,24 @@ INGREDIENT CATEGORY
         }
     ]
 }
+```
 
-METHOD
+## Method
 
+```json
 {    
     "_id": {
             "$oid": "5ebaa6ace1e9db12bc5fe71f"
         },
     "name": "roasting",
-    "definition": "Roasting is a cooking method that uses dry heat where hot air covers the food, cooking it evenly on all sides with temperatures of at least 150 °C (300 °F) from an open flame, oven, or other heat source.",
+    "definition": "Roasting is a cooking method that uses dry heat 
+    where hot air covers the food, cooking it evenly on all sides 
+    with temperatures of at least 150 °C (300 °F) from an 
+    open flame, oven, or other heat source.",
     "phrases": [
         "Roast $ingredient in the $p0 at $p1 $p2 for $p3 until $p4.",
-        "Roast $ingredient in the $p0 at $p1 $p2 for $p3 until internal temperature reaches $p5 $p6."
+        "Roast $ingredient in the $p0 at $p1 $p2 for $p3 
+        until internal temperature reaches $p5 $p6."
     ],
     "parameters": [{
             "par_type": "option",
@@ -88,21 +97,25 @@ METHOD
         "$oid": "5ebaa6ace1e9db12bc5fe71f"
     }]
 }
+```
 
+## Method Category
 
-METHOD CATEGORY
-
+```json
 {
     "_id": {
             "$oid": "5ebaa6ace1e9db12bc5fe71f"
         },
     "name": "dry-heat",
-    "definition": "Dry heat cooking refers to any cooking technique where the heat is transferred to the food item without using extra moisture. This method typically involves high temperatures 300 C or hotter."
+    "definition": "Dry heat cooking refers to any cooking 
+    technique where the heat is transferred to the food item without using 
+    extra moisture. This method typically involves high temperatures 300 C or hotter."
 }
+```
 
+## Recipe
 
-RECIPE
-
+```json
 {
     "_id": {
             "$oid": "5ebaa6ace1e9db12bc5fe71f"
@@ -120,12 +133,12 @@ RECIPE
     ],
     "ingredients": [{
             "$oid": "5ebaa6ace1e9db12bc5fe71f",
-            "amount": 200,
+            "amount": 200.0,
             "measurement": "grams"
         },
         {
             "$oid": "5ebaa6ace1e9db12bc5fe71f",
-            "amount": 200,
+            "amount": 200.0,
             "measurement": "grams"
         }
     ],
@@ -158,14 +171,18 @@ RECIPE
         }
     ]
 }
+```
 
+## Recipe Category
 
-RECIPE CATEGORY
+```json
 
 {
     "_id": {
             "$oid": "5ebaa6ace1e9db12bc5fe71f"
         },
     "name": "dessert",
-    "definition": "A usually sweet course or dish, as of fruit, ice cream, or pastry, served at the end of a meal."
+    "definition": "A usually sweet course or dish, as of 
+    fruit, ice cream, or pastry, served at the end of a meal."
 }
+```
