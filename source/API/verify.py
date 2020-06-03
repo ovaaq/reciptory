@@ -12,9 +12,8 @@ from source.API.schemas.recipe_category import recipe_category_schema
 
 def verify(document, schema):
     """Verifies that document is appropriately
-    formed. Returns True if document is formed
-    as schema instructs. Returns list of errors
-    otherwise.
+    formed. Returns list of errors
+    otherwise. Empty list implies correct document.
 
     Keyword arguments:
     document -- document object to verify
@@ -25,15 +24,13 @@ def verify(document, schema):
     for error in sorted(validator.iter_errors(document), key=str):
         errors.append(error.message)
 
-    if len(errors) > 0:
-        return errors
-    return True
+    return errors
 
 
 def recipe(document):
     """Verifies that recipe is appropriately
-    formatted. Returns True if valid and list
-    of errors otherwise.
+    formatted. Returns a list of errors. Empty list
+    implies correct document.
 
     Keyword arguments:
     document -- document object to verify
@@ -43,8 +40,8 @@ def recipe(document):
 
 def recipe_category(document):
     """Verifies that recipe category is appropriately
-    formatted. Returns True if valid and list
-    of errors otherwise.
+    formatted. Returns a list of errors. Empty list
+    implies correct document.
 
     Keyword arguments:
     document -- document object to verify
@@ -54,8 +51,8 @@ def recipe_category(document):
 
 def ingredient(document):
     """Verifies that ingredient is appropriately
-    formatted. Returns True if valid and list
-    of errors otherwise.
+    formatted. Returns a list of errors. Empty list
+    implies correct document.
 
     Keyword arguments:
     document -- document object to verify
@@ -64,9 +61,9 @@ def ingredient(document):
 
 
 def ingredient_category(document):
-    """Verifies that ingredient category
-     is appropriately formatted. Returns True
-     if valid and list of errors otherwise.
+    """Verifies that ingredient category is appropriately
+    formatted. Returns a list of errors. Empty list
+    implies correct document.
 
     Keyword arguments:
     document -- document object to verify
@@ -76,8 +73,8 @@ def ingredient_category(document):
 
 def method(document):
     """Verifies that method is appropriately
-    formatted. Returns True if valid and list
-    of errors otherwise.
+    formatted. Returns a list of errors. Empty list
+    implies correct document.
 
     Keyword arguments:
     document -- document object to verify
@@ -87,8 +84,8 @@ def method(document):
 
 def method_category(document):
     """Verifies that method category is appropriately
-    formatted. Returns True if valid and list
-    of errors otherwise.
+    formatted. Returns a list of errors. Empty list
+    implies correct document.
 
     Keyword arguments:
     document -- document object to verify

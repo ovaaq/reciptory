@@ -28,16 +28,16 @@ def general_get(collection, singe_term, plural_term, object_id=None):
     object_id -- optional. To get specific object from the db
     """
     if object_id is None:
-        request = {plural_term: collection.get_all()}
-        if request.get(plural_term) is None:
+        data = {plural_term: collection.get_all()}
+        if data.get(plural_term) is None:
             abort(404, status="fail", message="there is no objects in the database")
 
     else:
-        request = {singe_term: collection.get(object_id)}
-        if request.get(singe_term) is None:
+        data = {singe_term: collection.get(object_id)}
+        if data.get(singe_term) is None:
             abort(404, status="fail", message=(singe_term + " with id '" + object_id + "' could not be found"))
 
-    return loads(dumps({"status": "success", "data": request}))
+    return loads(dumps({"status": "success", "data": data}))
 
 
 def general_put(collection, content, verifier, object_id=None):
@@ -51,15 +51,16 @@ def general_put(collection, content, verifier, object_id=None):
     object_id -- optional. To edit specific object from the db
     """
     tmp = verifier(content)
-    if tmp is True:
+    if len(tmp) < 1:
         if object_id is None:
             is_success = collection.add(content)
         else:
             is_success = collection.edit(object_id, content)
         if is_success:
             return loads(dumps({"status": "success", "data": content}))
+        # palauta mieluummin tietokannasta haettu data eli varmista samuus
         else:
-            abort(500, status="fail", message="Internal Server Error")
+            abort(500, status="error", message="Internal Server Error")
     else:
         abort(400, status="fail", errors=tmp)
 
@@ -77,9 +78,9 @@ def general_delete(collection, singe_term, object_id=None):
         abort(400, status="fail", message=singe_term + " id is required to delete object")
 
     else:
-        request = {singe_term: collection.delete(object_id)}
-        if request is False:
-            abort(500, status="fail", message="Internal Server Error")
+        transaction = {singe_term: collection.delete(object_id)}
+        if transaction is False:
+            abort(500, status="error", message="Internal Server Error")
 
     return loads(dumps({"status": "success", "data": None}))
 
