@@ -4,18 +4,10 @@ from json import loads
 from bson.json_util import dumps
 from flask import request
 from flask_restful import Resource, abort
-from source.API.connection import Connection
 from source.API import verify
-from source.API.collection import Collection
+from source.settings import Settings
 
-con = Connection()
-
-ingredient_col = Collection(con, "ingredient")
-ingredient_category_col = Collection(con, "ingredient_category")
-recipe_col = Collection(con, "recipe")
-recipe_category_col = Collection(con, "recipe_category")
-method_col = Collection(con, "method")
-method_category_col = Collection(con, "method_category")
+settings = Settings()
 
 
 def general_get(collection, singe_term, plural_term, object_id=None):
@@ -95,7 +87,7 @@ class Resources:
             Keyword arguments:
             object_id -- optional. To get specific object from the db
             """
-            return general_get(ingredient_col, "ingredient", "ingredients", object_id)
+            return general_get(settings.ingredient_col, "ingredient", "ingredients", object_id)
 
         def put(self, object_id=None):
             """Add or edit an ingredient from the database.
@@ -105,7 +97,7 @@ class Resources:
             object_id -- optional. To edit specific object from the db
             """
             content = request.json
-            return general_put(ingredient_col, content, verify.ingredient, object_id)
+            return general_put(settings.ingredient_col, content, verify.ingredient, object_id)
 
         def delete(self, object_id=None):
             """Deletes a ingredient from the database.
@@ -114,7 +106,7 @@ class Resources:
             Keyword arguments:
             object_id -- To get specific object from the db
             """
-            return general_delete(ingredient_col, "ingredient", object_id)
+            return general_delete(settings.ingredient_col, "ingredient", object_id)
 
     class IngredientCategory(Resource):
 
@@ -125,7 +117,7 @@ class Resources:
             Keyword arguments:
             object_id -- optional. To get specific object from the db
             """
-            return general_get(ingredient_category_col, "ingredient category", "ingredient categories", object_id)
+            return general_get(settings.ingredient_category_col, "ingredient category", "ingredient categories", object_id)
 
         def put(self, object_id=None):
             """Add or edit an ingredient category from the database.
@@ -135,7 +127,7 @@ class Resources:
             object_id -- optional. To edit specific object from the db
             """
             content = request.json
-            return general_put(ingredient_category_col, content, verify.ingredient_category, object_id)
+            return general_put(settings.ingredient_category_col, content, verify.ingredient_category, object_id)
 
         def delete(self, object_id=None):
             """Deletes a ingredient category from the database.
@@ -144,7 +136,7 @@ class Resources:
             Keyword arguments:
             object_id -- To get specific object from the db
             """
-            return general_delete(ingredient_category_col, "ingredient category", object_id)
+            return general_delete(settings.ingredient_category_col, "ingredient category", object_id)
 
     class Recipe(Resource):
 
@@ -155,7 +147,7 @@ class Resources:
             Keyword arguments:
             object_id -- optional. To get specific object from the db
             """
-            return general_get(recipe_col, "recipe", object_id)
+            return general_get(settings.recipe_col, "recipe", object_id)
 
         def put(self, object_id=None):
             """Add or edit an recipe from the database.
@@ -165,7 +157,7 @@ class Resources:
             object_id -- optional. To edit specific object from the db
             """
             content = request.json
-            return general_put(recipe_col, content, verify.recipe, object_id)
+            return general_put(settings.recipe_col, content, verify.recipe, object_id)
 
         def delete(self, object_id=None):
             """Deletes a recipe from the database.
@@ -174,7 +166,7 @@ class Resources:
             Keyword arguments:
             object_id -- To get specific object from the db
             """
-            return general_delete(recipe_col, "recipe", object_id)
+            return general_delete(settings.recipe_col, "recipe", object_id)
 
     class RecipeCategory(Resource):
 
@@ -185,7 +177,7 @@ class Resources:
             Keyword arguments:
             object_id -- optional. To get specific object from the db
             """
-            return general_get(recipe_category_col, "recipe category", object_id)
+            return general_get(settings.recipe_category_col, "recipe category", object_id)
 
         def put(self, object_id=None):
             """Add or edit an recipe category from the database.
@@ -195,7 +187,7 @@ class Resources:
             object_id -- optional. To edit specific object from the db
             """
             content = request.json
-            return general_put(recipe_category_col, content, verify.recipe_category, object_id)
+            return general_put(settings.recipe_category_col, content, verify.recipe_category, object_id)
 
         def delete(self, object_id=None):
             """Deletes a recipe category from the database.
@@ -204,7 +196,7 @@ class Resources:
             Keyword arguments:
             object_id -- To get specific object from the db
             """
-            return general_get(recipe_category_col, "recipe category", object_id)
+            return general_get(settings.recipe_category_col, "recipe category", object_id)
 
     class Method(Resource):
 
@@ -215,7 +207,7 @@ class Resources:
             Keyword arguments:
             object_id -- optional. To get specific object from the db
             """
-            return general_get(method_col, "method", "methods", object_id)
+            return general_get(settings.method_col, "method", "methods", object_id)
 
         def put(self, object_id=None):
             """Add or edit an method from the database.
@@ -225,7 +217,7 @@ class Resources:
             object_id -- optional. To edit specific object from the db
             """
             content = request.json
-            return general_put(method_col, content, verify.method, object_id)
+            return general_put(settings.method_col, content, verify.method, object_id)
 
         def delete(self, object_id=None):
             """Deletes a method from the database.
@@ -234,7 +226,7 @@ class Resources:
             Keyword arguments:
             object_id -- To get specific object from the db
             """
-            return general_get(method_col, "method", object_id)
+            return general_get(settings.method_col, "method", object_id)
 
     class MethodCategory(Resource):
 
@@ -245,7 +237,7 @@ class Resources:
             Keyword arguments:
             object_id -- optional. To get specific object from the db
             """
-            return general_get(method_category_col, "method category", "method categories", object_id)
+            return general_get(settings.method_category_col, "method category", "method categories", object_id)
 
         def put(self, object_id=None):
             """Add or edit an method category from the database.
@@ -255,7 +247,7 @@ class Resources:
             object_id -- optional. To edit specific object from the db
             """
             content = request.json
-            return general_put(method_category_col, content, verify.method_category, object_id)
+            return general_put(settings.method_category_col, content, verify.method_category, object_id)
 
         def delete(self, object_id=None):
             """Deletes a method category from the database.
@@ -264,4 +256,4 @@ class Resources:
             Keyword arguments:
             object_id -- To get specific object from the db
             """
-            return general_get(method_category_col, "method category", object_id)
+            return general_get(settings.method_category_col, "method category", object_id)

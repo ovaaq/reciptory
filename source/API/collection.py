@@ -84,7 +84,23 @@ class Collection:
             print('Object with id ' + object_id
                   + ' was deleted successfully from the collection "' + self.name + '"')
         except:
-            print('Failed to delete object to the collection "' + self.name + '"')
+            print('Failed to delete object with id "' + object_id + '" from the collection "' + self.name + '"')
+            return False
+
+        return True
+
+    def delete_all(self):
+        """Tries to delete an ingredient from the database and
+        returns boolean about outcome.
+
+        Keyword arguments:
+        ingredient_id -- database id for the ingredient object
+        """
+        try:
+            self.collection.delete_all()
+            print('All objects were deleted successfully from the collection "' + self.name + '"')
+        except:
+            print('Failed to delete all objects from the collection "' + self.name + '"')
             return False
 
         return True
