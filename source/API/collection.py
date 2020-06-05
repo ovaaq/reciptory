@@ -64,9 +64,20 @@ class Collection:
         try:
             document = loads(dumps(data))
             object_id = self.collection.insert_one(document).inserted_id
+
+            parent_id = document["parent_category"]
+            print(parent_id)
+            parent = self.get(parent_id.__str__())
+            id_list = parent.get("child_categories")
+            id_list.append(ObjectId(object_id))
+            parent["child_categories"] = id_list
+            del parent["_id"]
+            print(parent)
+            self.edit(parent_id, (parent))
             print('Object with id "' + object_id.__str__()
                   + '" was added successfully to the collection "' + self.name + '"')
-        except:
+        except Exception as e:
+            print(e)
             print('Failed to add object to the collection "' + self.name + '"')
             return False
 
@@ -80,7 +91,21 @@ class Collection:
         ingredient_id -- database id for the ingredient object
         """
         try:
-            self.collection.delete_one({"_id": ObjectId(object_id)})
+            soon_deleted = self.collection.find_one({"_id": ObjectId(object_id)})
+            try:
+                #parent_id = soon_deleted.get("parent_category")
+                #edit_parent = self.get(parent_id)
+                #parents_children = edit_parent.get("child_categories")
+                #edit_parent.set(parents_children.remove(object_id))
+                #self.edit(parent_id, edit_parent)
+                child_object = soon_deleted.get("child_categories")
+                for child in child_object:
+                    print(child)
+                    self.delete(child)
+            except:
+                pass
+            return_value = self.collection.delete_one({"_id": ObjectId(object_id)})
+            print(return_value)
             print('Object with id ' + object_id
                   + ' was deleted successfully from the collection "' + self.name + '"')
         except:
@@ -118,7 +143,7 @@ class Collection:
             self.collection.update({"_id": ObjectId(object_id)}, document)
             print('Object with id ' + object_id + ' was edited successfully in the collection "' + self.name + '"')
         except:
-            print('Failed to edit object in the collection "' + self.name + '"')
+            print('Failed to edit object with id ' + object_id + '  in the collection "' + self.name + '"')
             return False
 
         return True

@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "5eda9e7ea38fe3259ef3dc9b"
+  },
+  "name": "CHILD1",
+  "parent_category": {
+    "$oid": "5ebaa6ace1e9db12bc5fe71f"
+  },
+  "child_categories": [
+    {
+      "$oid": "5ebaa6ace1e9db12bc5fe71f"
+    },
+    {
+      "$oid": "5eda9445596ea4ec3d96b265"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5eda9e809724a58399b10f83"
+  },
+  "name": "CHILD2",
+  "parent_category": {
+    "$oid": "5ebaa6ace1e9db12bc5fe71f"
+  },
+  "child_categories": [
+    {
+      "$oid": "5ebaa6ace1e9db12bc5fe71f"
+    },
+    {
+      "$oid": "5eda9445596ea4ec3d96b265"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5eda9e81d29b90c0ab1baae6"
+  },
+  "name": "PARENT",
+  "parent_category": {
+    "$oid": "5ebaa6ace1e9db12bc5fe71f"
+  },
+  "child_categories": [
+    {
+      "$oid": "5eda9484c77acdb217c8a073"
+    },
+    {
+      "$oid": "5eda9445596ea4ec3d96b265"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5eda9e829063a7b05d288778"
+  },
+  "name": "chicken",
+  "parent_category": {
+    "$oid": "5ebaa6ace1e9db12bc5fe71f"
+  },
+  "child_categories": [
+    {
+      "$oid": "5ebaa6ace1e9db12bc5fe71f"
+    },
+    {
+      "$oid": "5eda9445596ea4ec3d96b265"
+    }
+  ]
+}]
