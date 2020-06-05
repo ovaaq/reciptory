@@ -5,12 +5,10 @@ from source.API.collection import Collection
 from source.API.connection import Connection
 
 
-load_dotenv()
-
-
 class Settings:
 
     def __init__(self):
+        load_dotenv()
         self.mongo_url = os.getenv("MONGO")
         self.connection = Connection(self.mongo_url)
 
