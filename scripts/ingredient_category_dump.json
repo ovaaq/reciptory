@@ -1,0 +1,1710 @@
+[{
+  "_id": {
+    "$oid": "5edb6373ebf451979907d83b"
+  },
+  "name": "root",
+  "parent_category": null,
+  "child_categories": [
+    {
+      "$oid": "5edb638173a35a40c9d35b23"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb638173a35a40c9d35b23"
+  },
+  "name": "living",
+  "parent_category": {
+    "$oid": "5edb6373ebf451979907d83b"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb63a9a9cec8d6867b2a18"
+    },
+    {
+      "$oid": "5edb63b01f1995e2dc554a75"
+    },
+    {
+      "$oid": "5edb640fd6b3cf1a3978c8a0"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb63a9a9cec8d6867b2a18"
+  },
+  "name": "fungi",
+  "parent_category": {
+    "$oid": "5edb638173a35a40c9d35b23"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb657ddf5f26a2610e931a"
+    },
+    {
+      "$oid": "5edb6585d2e255d3d7f536d6"
+    },
+    {
+      "$oid": "5edb658f899c727ff83e8c3b"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb63b01f1995e2dc554a75"
+  },
+  "name": "plantae",
+  "parent_category": {
+    "$oid": "5edb638173a35a40c9d35b23"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb99682c2c8e22bda70c41"
+    },
+    {
+      "$oid": "5edb9987d678535b93caffe8"
+    },
+    {
+      "$oid": "5edb998b8d15625adbade5ed"
+    },
+    {
+      "$oid": "5edb99ceb57e15509a9be1c0"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb640fd6b3cf1a3978c8a0"
+  },
+  "name": "animal",
+  "parent_category": {
+    "$oid": "5edb638173a35a40c9d35b23"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb65d12cc41b365bd1fd58"
+    },
+    {
+      "$oid": "5edb65d54d50539149b4c9d7"
+    },
+    {
+      "$oid": "5edb65de2e3e98089ea0e107"
+    },
+    {
+      "$oid": "5edb65e50a4bcb7a525d0fb6"
+    },
+    {
+      "$oid": "5edb65f0fc1d49ce74b2a247"
+    },
+    {
+      "$oid": "5edb65fa09bf17692a16e208"
+    },
+    {
+      "$oid": "5edb6625d5ce9bf7f43045fa"
+    },
+    {
+      "$oid": "5edb6637ba83a40af96e3ecf"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb657ddf5f26a2610e931a"
+  },
+  "name": "mold",
+  "parent_category": {
+    "$oid": "5edb63a9a9cec8d6867b2a18"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb6585d2e255d3d7f536d6"
+  },
+  "name": "yeast",
+  "parent_category": {
+    "$oid": "5edb63a9a9cec8d6867b2a18"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb658f899c727ff83e8c3b"
+  },
+  "name": "mushrooms",
+  "parent_category": {
+    "$oid": "5edb63a9a9cec8d6867b2a18"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb65d12cc41b365bd1fd58"
+  },
+  "name": "mammal",
+  "parent_category": {
+    "$oid": "5edb640fd6b3cf1a3978c8a0"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb677b1032d74541f187d8"
+    },
+    {
+      "$oid": "5edb678c023eec482ad2356c"
+    },
+    {
+      "$oid": "5edb6799d3f50ca7ded5b223"
+    },
+    {
+      "$oid": "5edb679f175456dcfcd32028"
+    },
+    {
+      "$oid": "5edb67a6a8f905d41ac133d0"
+    },
+    {
+      "$oid": "5edb67ac82a1b9fb62bd0a5e"
+    },
+    {
+      "$oid": "5edb67b32a34ad2c88574aa1"
+    },
+    {
+      "$oid": "5edb67b90e8617413235af7f"
+    },
+    {
+      "$oid": "5edb67bfaf7e8cbea65ee8a6"
+    },
+    {
+      "$oid": "5edb67c416b765045cfb215b"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb65d54d50539149b4c9d7"
+  },
+  "name": "bird",
+  "parent_category": {
+    "$oid": "5edb640fd6b3cf1a3978c8a0"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb67dc91d1cc088025dd01"
+    },
+    {
+      "$oid": "5edb67e3b804d4f0e9c6ab95"
+    },
+    {
+      "$oid": "5edb67e8d4d8363fcd58f407"
+    },
+    {
+      "$oid": "5edb67eea680306b2ea03f9c"
+    },
+    {
+      "$oid": "5edb67fbb8c6913e1352b2de"
+    },
+    {
+      "$oid": "5edb6800606e948261fb81c3"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb65de2e3e98089ea0e107"
+  },
+  "name": "fish",
+  "parent_category": {
+    "$oid": "5edb640fd6b3cf1a3978c8a0"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb6811d2ea676e14333933"
+    },
+    {
+      "$oid": "5edb68172006e953c8a1f252"
+    },
+    {
+      "$oid": "5edb681c655facadafe5f23c"
+    },
+    {
+      "$oid": "5edb682939ba5d3e525a203e"
+    },
+    {
+      "$oid": "5edb683fa3912cf5bcf11891"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb65e50a4bcb7a525d0fb6"
+  },
+  "name": "insect",
+  "parent_category": {
+    "$oid": "5edb640fd6b3cf1a3978c8a0"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb68574bfd5b40caeb92da"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb65f0fc1d49ce74b2a247"
+  },
+  "name": "reptile",
+  "parent_category": {
+    "$oid": "5edb640fd6b3cf1a3978c8a0"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb68c0a60201851938da7e"
+    },
+    {
+      "$oid": "5edb68cab7ee76a2f0ac7c03"
+    },
+    {
+      "$oid": "5edb68d1a8ce677e9a05df9d"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb65fa09bf17692a16e208"
+  },
+  "name": "amphibian",
+  "parent_category": {
+    "$oid": "5edb640fd6b3cf1a3978c8a0"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb68de19f49b62206d672e"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb6625d5ce9bf7f43045fa"
+  },
+  "name": "mollusk",
+  "parent_category": {
+    "$oid": "5edb640fd6b3cf1a3978c8a0"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb689b571d2c5ef29a3120"
+    },
+    {
+      "$oid": "5edb68a16ebdeff76549e277"
+    },
+    {
+      "$oid": "5edb68a7f30f023351b1a099"
+    },
+    {
+      "$oid": "5edb68aee7d0b8d8b12c7cb1"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb6637ba83a40af96e3ecf"
+  },
+  "name": "crustacean",
+  "parent_category": {
+    "$oid": "5edb640fd6b3cf1a3978c8a0"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb686960b226f8c8b0bf36"
+    },
+    {
+      "$oid": "5edb68707512153edeeb1dae"
+    },
+    {
+      "$oid": "5edb687ac1475d1e6333f040"
+    },
+    {
+      "$oid": "5edb68800fc06be57ac9ff76"
+    },
+    {
+      "$oid": "5edb68875ef0d54951c3c142"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb677b1032d74541f187d8"
+  },
+  "name": "goat",
+  "parent_category": {
+    "$oid": "5edb65d12cc41b365bd1fd58"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb678c023eec482ad2356c"
+  },
+  "name": "rabbit",
+  "parent_category": {
+    "$oid": "5edb65d12cc41b365bd1fd58"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb6799d3f50ca7ded5b223"
+  },
+  "name": "wild boar",
+  "parent_category": {
+    "$oid": "5edb65d12cc41b365bd1fd58"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb679f175456dcfcd32028"
+  },
+  "name": "pig",
+  "parent_category": {
+    "$oid": "5edb65d12cc41b365bd1fd58"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb67a6a8f905d41ac133d0"
+  },
+  "name": "bison",
+  "parent_category": {
+    "$oid": "5edb65d12cc41b365bd1fd58"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb67ac82a1b9fb62bd0a5e"
+  },
+  "name": "buffalo",
+  "parent_category": {
+    "$oid": "5edb65d12cc41b365bd1fd58"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb67b32a34ad2c88574aa1"
+  },
+  "name": "cattle",
+  "parent_category": {
+    "$oid": "5edb65d12cc41b365bd1fd58"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb67b90e8617413235af7f"
+  },
+  "name": "horse",
+  "parent_category": {
+    "$oid": "5edb65d12cc41b365bd1fd58"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb67bfaf7e8cbea65ee8a6"
+  },
+  "name": "moose",
+  "parent_category": {
+    "$oid": "5edb65d12cc41b365bd1fd58"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb67c416b765045cfb215b"
+  },
+  "name": "reindeer",
+  "parent_category": {
+    "$oid": "5edb65d12cc41b365bd1fd58"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb67dc91d1cc088025dd01"
+  },
+  "name": "chicken",
+  "parent_category": {
+    "$oid": "5edb65d54d50539149b4c9d7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb67e3b804d4f0e9c6ab95"
+  },
+  "name": "duck",
+  "parent_category": {
+    "$oid": "5edb65d54d50539149b4c9d7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb67e8d4d8363fcd58f407"
+  },
+  "name": "goose",
+  "parent_category": {
+    "$oid": "5edb65d54d50539149b4c9d7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb67eea680306b2ea03f9c"
+  },
+  "name": "turkey",
+  "parent_category": {
+    "$oid": "5edb65d54d50539149b4c9d7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb67fbb8c6913e1352b2de"
+  },
+  "name": "ostrich",
+  "parent_category": {
+    "$oid": "5edb65d54d50539149b4c9d7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb6800606e948261fb81c3"
+  },
+  "name": "emu",
+  "parent_category": {
+    "$oid": "5edb65d54d50539149b4c9d7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb6811d2ea676e14333933"
+  },
+  "name": "salmon",
+  "parent_category": {
+    "$oid": "5edb65de2e3e98089ea0e107"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb68172006e953c8a1f252"
+  },
+  "name": "trout",
+  "parent_category": {
+    "$oid": "5edb65de2e3e98089ea0e107"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb681c655facadafe5f23c"
+  },
+  "name": "carp",
+  "parent_category": {
+    "$oid": "5edb65de2e3e98089ea0e107"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb682939ba5d3e525a203e"
+  },
+  "name": "perch",
+  "parent_category": {
+    "$oid": "5edb65de2e3e98089ea0e107"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb683fa3912cf5bcf11891"
+  },
+  "name": "pike-perch",
+  "parent_category": {
+    "$oid": "5edb65de2e3e98089ea0e107"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb68574bfd5b40caeb92da"
+  },
+  "name": "grasshopper",
+  "parent_category": {
+    "$oid": "5edb65e50a4bcb7a525d0fb6"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb686960b226f8c8b0bf36"
+  },
+  "name": "crab",
+  "parent_category": {
+    "$oid": "5edb6637ba83a40af96e3ecf"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb68707512153edeeb1dae"
+  },
+  "name": "shrimp",
+  "parent_category": {
+    "$oid": "5edb6637ba83a40af96e3ecf"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb687ac1475d1e6333f040"
+  },
+  "name": "prawn",
+  "parent_category": {
+    "$oid": "5edb6637ba83a40af96e3ecf"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb68800fc06be57ac9ff76"
+  },
+  "name": "lobster",
+  "parent_category": {
+    "$oid": "5edb6637ba83a40af96e3ecf"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb68875ef0d54951c3c142"
+  },
+  "name": "crayfish",
+  "parent_category": {
+    "$oid": "5edb6637ba83a40af96e3ecf"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb689b571d2c5ef29a3120"
+  },
+  "name": "oysters",
+  "parent_category": {
+    "$oid": "5edb6625d5ce9bf7f43045fa"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb68a16ebdeff76549e277"
+  },
+  "name": "mussels",
+  "parent_category": {
+    "$oid": "5edb6625d5ce9bf7f43045fa"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb68a7f30f023351b1a099"
+  },
+  "name": "land snails",
+  "parent_category": {
+    "$oid": "5edb6625d5ce9bf7f43045fa"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb68aee7d0b8d8b12c7cb1"
+  },
+  "name": "abalone",
+  "parent_category": {
+    "$oid": "5edb6625d5ce9bf7f43045fa"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb68c0a60201851938da7e"
+  },
+  "name": "alligator",
+  "parent_category": {
+    "$oid": "5edb65f0fc1d49ce74b2a247"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb68cab7ee76a2f0ac7c03"
+  },
+  "name": "crocodile",
+  "parent_category": {
+    "$oid": "5edb65f0fc1d49ce74b2a247"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb68d1a8ce677e9a05df9d"
+  },
+  "name": "turtle",
+  "parent_category": {
+    "$oid": "5edb65f0fc1d49ce74b2a247"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb68de19f49b62206d672e"
+  },
+  "name": "frog",
+  "parent_category": {
+    "$oid": "5edb65fa09bf17692a16e208"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb99682c2c8e22bda70c41"
+  },
+  "name": "legume",
+  "parent_category": {
+    "$oid": "5edb63b01f1995e2dc554a75"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "name": "vegetable",
+  "parent_category": {
+    "$oid": "5edb63b01f1995e2dc554a75"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb9fbdba67c5c9065fc6c4"
+    },
+    {
+      "$oid": "5edb9fd0ddd18f524048736a"
+    },
+    {
+      "$oid": "5edb9fd8b99cb10762aef59e"
+    },
+    {
+      "$oid": "5edb9fea6b136d989140cec6"
+    },
+    {
+      "$oid": "5edb9ff61fe5aec262984246"
+    },
+    {
+      "$oid": "5edb9fffaca0b9f1f1f032f1"
+    },
+    {
+      "$oid": "5edba00c424b09c7b1c6d853"
+    },
+    {
+      "$oid": "5edba01545445b600a33aa27"
+    },
+    {
+      "$oid": "5edba02b10395f3ce92040b8"
+    },
+    {
+      "$oid": "5edba0360efed48faca2b3ff"
+    },
+    {
+      "$oid": "5edba041d7d4af2e49957519"
+    },
+    {
+      "$oid": "5edba0b2cec6fd55a3e00beb"
+    },
+    {
+      "$oid": "5edba0d8c9973b067cda3365"
+    },
+    {
+      "$oid": "5edba0e3bd4ad1588332eef2"
+    },
+    {
+      "$oid": "5edba113ce51090fc33160ea"
+    },
+    {
+      "$oid": "5edba1223d23eb213accb766"
+    },
+    {
+      "$oid": "5edba12d153b268e276320d5"
+    },
+    {
+      "$oid": "5edba13b90819719a05ffb26"
+    },
+    {
+      "$oid": "5edba1474ffa19cecb978bc8"
+    },
+    {
+      "$oid": "5edba15affc24146457ad0c4"
+    },
+    {
+      "$oid": "5edba16cc233fa5597cacb80"
+    },
+    {
+      "$oid": "5edba176d09f9a4faf9d51f4"
+    },
+    {
+      "$oid": "5edba192f0cc4f88baf88ace"
+    },
+    {
+      "$oid": "5edba1bfbb405102ff41f63e"
+    },
+    {
+      "$oid": "5edba1c767b9be1768f25c9c"
+    },
+    {
+      "$oid": "5edba1f62f6109feb5c2a2ff"
+    },
+    {
+      "$oid": "5edba1fd291e23940d2af99e"
+    },
+    {
+      "$oid": "5edba20656d4589afedeb15e"
+    },
+    {
+      "$oid": "5edba20a195154642f8c84c6"
+    },
+    {
+      "$oid": "5edba2153dd42185c50d09f1"
+    },
+    {
+      "$oid": "5edba21c001dc2710a284501"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb998b8d15625adbade5ed"
+  },
+  "name": "fruit",
+  "parent_category": {
+    "$oid": "5edb63b01f1995e2dc554a75"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb9b05f8d78a477fcc0b24"
+    },
+    {
+      "$oid": "5edb9b2b1b9d3d42fb8df51f"
+    },
+    {
+      "$oid": "5edb9b36e5473e868072d83f"
+    },
+    {
+      "$oid": "5edb9b3e3d0b2b3109ba88dd"
+    },
+    {
+      "$oid": "5edb9b477bbe8529da23d9b7"
+    },
+    {
+      "$oid": "5edb9b529abe55194b8452b8"
+    },
+    {
+      "$oid": "5edb9bcb306f1b86b2616f4e"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb99ceb57e15509a9be1c0"
+  },
+  "name": "root vegetable",
+  "parent_category": {
+    "$oid": "5edb63b01f1995e2dc554a75"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb99fee1e8d6b4ad34daf8"
+    },
+    {
+      "$oid": "5edb9a08308620a176d0aa34"
+    },
+    {
+      "$oid": "5edb9a15825fcdcb3d0960cb"
+    },
+    {
+      "$oid": "5edb9a20f646f813e97d734b"
+    },
+    {
+      "$oid": "5edb9a2a35ebbac0e70d2d43"
+    },
+    {
+      "$oid": "5edb9a4629493873c8450902"
+    },
+    {
+      "$oid": "5edb9a58e722d0c7ae06cb40"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb99fee1e8d6b4ad34daf8"
+  },
+  "name": "turmeric",
+  "parent_category": {
+    "$oid": "5edb99ceb57e15509a9be1c0"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9a08308620a176d0aa34"
+  },
+  "name": "ginger",
+  "parent_category": {
+    "$oid": "5edb99ceb57e15509a9be1c0"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9a15825fcdcb3d0960cb"
+  },
+  "name": "potato",
+  "parent_category": {
+    "$oid": "5edb99ceb57e15509a9be1c0"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9a20f646f813e97d734b"
+  },
+  "name": "turnip",
+  "parent_category": {
+    "$oid": "5edb99ceb57e15509a9be1c0"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9a2a35ebbac0e70d2d43"
+  },
+  "name": "carrot",
+  "parent_category": {
+    "$oid": "5edb99ceb57e15509a9be1c0"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9a4629493873c8450902"
+  },
+  "name": "sweet potato",
+  "parent_category": {
+    "$oid": "5edb99ceb57e15509a9be1c0"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9a58e722d0c7ae06cb40"
+  },
+  "name": "beetroot",
+  "parent_category": {
+    "$oid": "5edb99ceb57e15509a9be1c0"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9b05f8d78a477fcc0b24"
+  },
+  "name": "pome",
+  "parent_category": {
+    "$oid": "5edb998b8d15625adbade5ed"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb9b88ee5a6ccebaca5bbd"
+    },
+    {
+      "$oid": "5edb9b90f3eb3e7e17cf1c9e"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb9b2b1b9d3d42fb8df51f"
+  },
+  "name": "citrus",
+  "parent_category": {
+    "$oid": "5edb998b8d15625adbade5ed"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb9c91408fe6c3b96142e2"
+    },
+    {
+      "$oid": "5edb9cb142aedc54b0611cca"
+    },
+    {
+      "$oid": "5edb9cbf3160540a2dd1335b"
+    },
+    {
+      "$oid": "5edb9cc4a81ae770519f386a"
+    },
+    {
+      "$oid": "5edb9ccd10d71feff35ff69a"
+    },
+    {
+      "$oid": "5edb9cf023e0ef70f3b92048"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb9b36e5473e868072d83f"
+  },
+  "name": "berry",
+  "parent_category": {
+    "$oid": "5edb998b8d15625adbade5ed"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb9d1ea71afdca615cee05"
+    },
+    {
+      "$oid": "5edb9d30d42605380a6e06c7"
+    },
+    {
+      "$oid": "5edb9d45ec5b4b25473bd682"
+    },
+    {
+      "$oid": "5edb9d5017eacbfc7fdb872d"
+    },
+    {
+      "$oid": "5edb9d630a1fa01933c301ea"
+    },
+    {
+      "$oid": "5edb9d781dfad941279898fe"
+    },
+    {
+      "$oid": "5edb9d8638ab5b520226ebef"
+    },
+    {
+      "$oid": "5edb9d96a860de25c6e5af97"
+    },
+    {
+      "$oid": "5edb9da5cc1e51c0c346bcef"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb9b3e3d0b2b3109ba88dd"
+  },
+  "name": "melon",
+  "parent_category": {
+    "$oid": "5edb998b8d15625adbade5ed"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb9e4e5702e3f9b1abfcde"
+    },
+    {
+      "$oid": "5edb9e5925074079232bd09d"
+    },
+    {
+      "$oid": "5edb9e645eb31c66fb277eaa"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb9b477bbe8529da23d9b7"
+  },
+  "name": "tropical",
+  "parent_category": {
+    "$oid": "5edb998b8d15625adbade5ed"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb9e7ab2b1c2dbcbebbdb9"
+    },
+    {
+      "$oid": "5edb9e91f3a2edaf7c68a529"
+    },
+    {
+      "$oid": "5edb9ea8bb40413f01f72f91"
+    },
+    {
+      "$oid": "5edb9eae3b1336e2db18d1a6"
+    },
+    {
+      "$oid": "5edb9ec066618028c53cc044"
+    },
+    {
+      "$oid": "5edb9ecf31b14420bdacef0d"
+    },
+    {
+      "$oid": "5edb9ed79c8322b831355ce3"
+    },
+    {
+      "$oid": "5edb9f00827551e405535da3"
+    },
+    {
+      "$oid": "5edb9f0a5520f602aaedbfea"
+    },
+    {
+      "$oid": "5edb9f15c5096217cceda7a2"
+    },
+    {
+      "$oid": "5edb9f286f0a21911ae04602"
+    },
+    {
+      "$oid": "5edb9f33fa58f8f995ba0cca"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb9b529abe55194b8452b8"
+  },
+  "name": "cacti",
+  "parent_category": {
+    "$oid": "5edb998b8d15625adbade5ed"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9b88ee5a6ccebaca5bbd"
+  },
+  "name": "apple",
+  "parent_category": {
+    "$oid": "5edb9b05f8d78a477fcc0b24"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9b90f3eb3e7e17cf1c9e"
+  },
+  "name": "pear",
+  "parent_category": {
+    "$oid": "5edb9b05f8d78a477fcc0b24"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9bcb306f1b86b2616f4e"
+  },
+  "name": "drupe",
+  "parent_category": {
+    "$oid": "5edb998b8d15625adbade5ed"
+  },
+  "child_categories": [
+    {
+      "$oid": "5edb9be57155ad681c286b12"
+    },
+    {
+      "$oid": "5edb9bf3c6e9ee0eb7037068"
+    },
+    {
+      "$oid": "5edb9bfc7f511b9596377c37"
+    },
+    {
+      "$oid": "5edb9c05356338e45c523b7a"
+    },
+    {
+      "$oid": "5edb9c1cfdc878a168786cec"
+    },
+    {
+      "$oid": "5edb9c2afe6f40f63fecebf6"
+    },
+    {
+      "$oid": "5edb9c34217c5dbff89d51a5"
+    },
+    {
+      "$oid": "5edb9c4359dc095e2136e7f0"
+    },
+    {
+      "$oid": "5edb9c4c57c5e979b0859bb7"
+    }
+  ]
+},{
+  "_id": {
+    "$oid": "5edb9be57155ad681c286b12"
+  },
+  "name": "apricot",
+  "parent_category": {
+    "$oid": "5edb9bcb306f1b86b2616f4e"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9bf3c6e9ee0eb7037068"
+  },
+  "name": "cherry",
+  "parent_category": {
+    "$oid": "5edb9bcb306f1b86b2616f4e"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9bfc7f511b9596377c37"
+  },
+  "name": "coconut",
+  "parent_category": {
+    "$oid": "5edb9bcb306f1b86b2616f4e"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9c05356338e45c523b7a"
+  },
+  "name": "date",
+  "parent_category": {
+    "$oid": "5edb9bcb306f1b86b2616f4e"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9c1cfdc878a168786cec"
+  },
+  "name": "lychee",
+  "parent_category": {
+    "$oid": "5edb9bcb306f1b86b2616f4e"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9c2afe6f40f63fecebf6"
+  },
+  "name": "mango",
+  "parent_category": {
+    "$oid": "5edb9bcb306f1b86b2616f4e"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9c34217c5dbff89d51a5"
+  },
+  "name": "nectarine",
+  "parent_category": {
+    "$oid": "5edb9bcb306f1b86b2616f4e"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9c4359dc095e2136e7f0"
+  },
+  "name": "peach",
+  "parent_category": {
+    "$oid": "5edb9bcb306f1b86b2616f4e"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9c4c57c5e979b0859bb7"
+  },
+  "name": "plum",
+  "parent_category": {
+    "$oid": "5edb9bcb306f1b86b2616f4e"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9c91408fe6c3b96142e2"
+  },
+  "name": "blood orange",
+  "parent_category": {
+    "$oid": "5edb9b2b1b9d3d42fb8df51f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9cb142aedc54b0611cca"
+  },
+  "name": "grapefruit",
+  "parent_category": {
+    "$oid": "5edb9b2b1b9d3d42fb8df51f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9cbf3160540a2dd1335b"
+  },
+  "name": "lemon",
+  "parent_category": {
+    "$oid": "5edb9b2b1b9d3d42fb8df51f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9cc4a81ae770519f386a"
+  },
+  "name": "lime",
+  "parent_category": {
+    "$oid": "5edb9b2b1b9d3d42fb8df51f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9ccd10d71feff35ff69a"
+  },
+  "name": "orange",
+  "parent_category": {
+    "$oid": "5edb9b2b1b9d3d42fb8df51f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9cf023e0ef70f3b92048"
+  },
+  "name": "black currant",
+  "parent_category": {
+    "$oid": "5edb9b36e5473e868072d83f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9d1ea71afdca615cee05"
+  },
+  "name": "blueberry",
+  "parent_category": {
+    "$oid": "5edb9b36e5473e868072d83f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9d30d42605380a6e06c7"
+  },
+  "name": "boysenberry",
+  "parent_category": {
+    "$oid": "5edb9b36e5473e868072d83f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9d45ec5b4b25473bd682"
+  },
+  "name": "cloudberry",
+  "parent_category": {
+    "$oid": "5edb9b36e5473e868072d83f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9d5017eacbfc7fdb872d"
+  },
+  "name": "cranberry",
+  "parent_category": {
+    "$oid": "5edb9b36e5473e868072d83f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9d630a1fa01933c301ea"
+  },
+  "name": "grape",
+  "parent_category": {
+    "$oid": "5edb9b36e5473e868072d83f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9d781dfad941279898fe"
+  },
+  "name": "kiwifruit",
+  "parent_category": {
+    "$oid": "5edb9b36e5473e868072d83f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9d8638ab5b520226ebef"
+  },
+  "name": "lingonberry",
+  "parent_category": {
+    "$oid": "5edb9b36e5473e868072d83f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9d96a860de25c6e5af97"
+  },
+  "name": "raspberry",
+  "parent_category": {
+    "$oid": "5edb9b36e5473e868072d83f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9da5cc1e51c0c346bcef"
+  },
+  "name": "strawberry",
+  "parent_category": {
+    "$oid": "5edb9b36e5473e868072d83f"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9e4e5702e3f9b1abfcde"
+  },
+  "name": "honeydew melon",
+  "parent_category": {
+    "$oid": "5edb9b3e3d0b2b3109ba88dd"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9e5925074079232bd09d"
+  },
+  "name": "european cantaloupe",
+  "parent_category": {
+    "$oid": "5edb9b3e3d0b2b3109ba88dd"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9e645eb31c66fb277eaa"
+  },
+  "name": "watermelon",
+  "parent_category": {
+    "$oid": "5edb9b3e3d0b2b3109ba88dd"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9e7ab2b1c2dbcbebbdb9"
+  },
+  "name": "banana",
+  "parent_category": {
+    "$oid": "5edb9b477bbe8529da23d9b7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9e91f3a2edaf7c68a529"
+  },
+  "name": "cacao",
+  "parent_category": {
+    "$oid": "5edb9b477bbe8529da23d9b7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9ea8bb40413f01f72f91"
+  },
+  "name": "durian",
+  "parent_category": {
+    "$oid": "5edb9b477bbe8529da23d9b7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9eae3b1336e2db18d1a6"
+  },
+  "name": "fig",
+  "parent_category": {
+    "$oid": "5edb9b477bbe8529da23d9b7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9ec066618028c53cc044"
+  },
+  "name": "jackfruit",
+  "parent_category": {
+    "$oid": "5edb9b477bbe8529da23d9b7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9ecf31b14420bdacef0d"
+  },
+  "name": "papaya",
+  "parent_category": {
+    "$oid": "5edb9b477bbe8529da23d9b7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9ed79c8322b831355ce3"
+  },
+  "name": "passionfruit",
+  "parent_category": {
+    "$oid": "5edb9b477bbe8529da23d9b7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9f00827551e405535da3"
+  },
+  "name": "persimmon",
+  "parent_category": {
+    "$oid": "5edb9b477bbe8529da23d9b7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9f0a5520f602aaedbfea"
+  },
+  "name": "pineapple",
+  "parent_category": {
+    "$oid": "5edb9b477bbe8529da23d9b7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9f15c5096217cceda7a2"
+  },
+  "name": "pomegranate",
+  "parent_category": {
+    "$oid": "5edb9b477bbe8529da23d9b7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9f286f0a21911ae04602"
+  },
+  "name": "star fruit",
+  "parent_category": {
+    "$oid": "5edb9b477bbe8529da23d9b7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9f33fa58f8f995ba0cca"
+  },
+  "name": "vanilla",
+  "parent_category": {
+    "$oid": "5edb9b477bbe8529da23d9b7"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9fbdba67c5c9065fc6c4"
+  },
+  "name": "broccoli",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9fd0ddd18f524048736a"
+  },
+  "name": "cabbage",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9fd8b99cb10762aef59e"
+  },
+  "name": "celery",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9fea6b136d989140cec6"
+  },
+  "name": "dill",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9ff61fe5aec262984246"
+  },
+  "name": "kale",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edb9fffaca0b9f1f1f032f1"
+  },
+  "name": "lettuce",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba00c424b09c7b1c6d853"
+  },
+  "name": "mustard",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba01545445b600a33aa27"
+  },
+  "name": "pea",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba02b10395f3ce92040b8"
+  },
+  "name": "spinach",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba0360efed48faca2b3ff"
+  },
+  "name": "watercress",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba041d7d4af2e49957519"
+  },
+  "name": "avocado",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba0b2cec6fd55a3e00beb"
+  },
+  "name": "bell pepper",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba0d8c9973b067cda3365"
+  },
+  "name": "cucumber",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba0e3bd4ad1588332eef2"
+  },
+  "name": "eggplant",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba113ce51090fc33160ea"
+  },
+  "name": "olive",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba1223d23eb213accb766"
+  },
+  "name": "pumpkin",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba12d153b268e276320d5"
+  },
+  "name": "squash",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba13b90819719a05ffb26"
+  },
+  "name": "tomato",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba1474ffa19cecb978bc8"
+  },
+  "name": "zucchini",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba15affc24146457ad0c4"
+  },
+  "name": "artichoke",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba16cc233fa5597cacb80"
+  },
+  "name": "caper",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba176d09f9a4faf9d51f4"
+  },
+  "name": "cauliflower",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba192f0cc4f88baf88ace"
+  },
+  "name": "brussels sprouts",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba1bfbb405102ff41f63e"
+  },
+  "name": "sweet basil",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba1c767b9be1768f25c9c"
+  },
+  "name": "thai basil",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba1f62f6109feb5c2a2ff"
+  },
+  "name": "leek",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba1fd291e23940d2af99e"
+  },
+  "name": "asparagus",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba20656d4589afedeb15e"
+  },
+  "name": "chives",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba20a195154642f8c84c6"
+  },
+  "name": "garlic",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba2153dd42185c50d09f1"
+  },
+  "name": "onion",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+},{
+  "_id": {
+    "$oid": "5edba21c001dc2710a284501"
+  },
+  "name": "shallot",
+  "parent_category": {
+    "$oid": "5edb9987d678535b93caffe8"
+  },
+  "child_categories": []
+}]

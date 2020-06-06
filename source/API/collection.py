@@ -64,20 +64,19 @@ class Collection:
         try:
             document = loads(dumps(data))
             object_id = self.collection.insert_one(document).inserted_id
-
-            parent_id = document["parent_category"]
-            print(parent_id)
-            parent = self.get(parent_id.__str__())
-            id_list = parent.get("child_categories")
-            id_list.append(ObjectId(object_id))
-            parent["child_categories"] = id_list
-            del parent["_id"]
-            print(parent)
-            self.edit(parent_id, (parent))
+            try:
+                parent_id = document["parent_category"]
+                parent = self.get(parent_id.__str__())
+                id_list = parent.get("child_categories")
+                id_list.append(ObjectId(object_id))
+                parent["child_categories"] = id_list
+                del parent["_id"]
+                self.edit(parent_id.__str__(), parent)
+            except:
+                pass
             print('Object with id "' + object_id.__str__()
                   + '" was added successfully to the collection "' + self.name + '"')
         except Exception as e:
-            print(e)
             print('Failed to add object to the collection "' + self.name + '"')
             return False
 
@@ -98,10 +97,10 @@ class Collection:
                 #parents_children = edit_parent.get("child_categories")
                 #edit_parent.set(parents_children.remove(object_id))
                 #self.edit(parent_id, edit_parent)
-                child_object = soon_deleted.get("child_categories")
+                child_object = soon_deleted["child_categories"]
                 for child in child_object:
                     print(child)
-                    self.delete(child)
+                    self.delete(child.__str__())
             except:
                 pass
             return_value = self.collection.delete_one({"_id": ObjectId(object_id)})
@@ -122,9 +121,10 @@ class Collection:
         ingredient_id -- database id for the ingredient object
         """
         try:
-            self.collection.delete_all()
+            self.collection.delete_many({})
             print('All objects were deleted successfully from the collection "' + self.name + '"')
-        except:
+        except Exception as e:
+            print(e)
             print('Failed to delete all objects from the collection "' + self.name + '"')
             return False
 

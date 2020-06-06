@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 
 from json import loads
+
 from bson.json_util import dumps
 from flask import request
 from flask_restful import Resource, abort
+
 from source.API import verify
-from source.settings import Settings
+from source.API.settings import Settings
 
 settings = Settings()
 

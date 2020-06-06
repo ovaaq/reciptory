@@ -10,84 +10,106 @@ from source.API.schemas.recipe import recipe_schema
 from source.API.schemas.recipe_category import recipe_category_schema
 
 
-def verify(document, schema):
-    """Verifies that document is appropriately
-    formed. Returns list of errors
-    otherwise. Empty list implies correct document.
-
-    Keyword arguments:
-    document -- document object to verify
-    schema -- schema which is used to validate
+def verify(document, schema) -> list:
     """
-    errors = []
-    validator = Draft4Validator(schema)
+    Verifies that document is appropriately
+    formatted. Returns a list of errors. Empty list
+    implies correct document.
+
+    :param schema: schema for correct format
+    :param document: document to verify
+    :return: list
+    """
+    errors: list = []
+    validator: Draft4Validator = Draft4Validator(schema)
     for error in sorted(validator.iter_errors(document), key=str):
         errors.append(error.message)
 
     return errors
 
 
-def recipe(document):
-    """Verifies that recipe is appropriately
+def recipe(document) -> list:
+    """
+    Verifies that recipe document is appropriately
     formatted. Returns a list of errors. Empty list
     implies correct document.
 
-    Keyword arguments:
-    document -- document object to verify
+    :param document: recipe document to verify
+    :return: list
     """
     return verify(document, recipe_schema)
 
 
-def recipe_category(document):
-    """Verifies that recipe category is appropriately
+def recipe_category(document) -> list:
+    """
+    Verifies that recipe category document is appropriately
     formatted. Returns a list of errors. Empty list
     implies correct document.
 
-    Keyword arguments:
-    document -- document object to verify
+    :param document: recipe category document to verify
+    :return: list
     """
     return verify(document, recipe_category_schema)
 
 
-def ingredient(document):
-    """Verifies that ingredient is appropriately
+def ingredient(document) -> list:
+    """
+    Verifies that ingredient document is appropriately
     formatted. Returns a list of errors. Empty list
     implies correct document.
 
-    Keyword arguments:
-    document -- document object to verify
+    :param document: ingredient document to verify
+    :return: list
     """
     return verify(document, ingredient_schema)
 
 
-def ingredient_category(document):
-    """Verifies that ingredient category is appropriately
+def ingredient_category(document) -> list:
+    """
+    Verifies that ingredient category document is appropriately
     formatted. Returns a list of errors. Empty list
     implies correct document.
 
-    Keyword arguments:
-    document -- document object to verify
+    :param document: ingredient category document to verify
+    :return: list
     """
     return verify(document, ingredient_category_schema)
 
 
-def method(document):
-    """Verifies that method is appropriately
+def method(document) -> list:
+    """
+    Verifies that method document is appropriately
     formatted. Returns a list of errors. Empty list
     implies correct document.
 
-    Keyword arguments:
-    document -- document object to verify
+    :param document: method document to verify
+    :return: list
     """
     return verify(document, method_schema)
 
 
-def method_category(document):
-    """Verifies that method category is appropriately
+def method_category(document) -> list:
+    """
+    Verifies that method category document is appropriately
     formatted. Returns a list of errors. Empty list
     implies correct document.
 
-    Keyword arguments:
-    document -- document object to verify
+    :param document: method category document to verify
+    :return: list
     """
     return verify(document, method_category_schema)
+
+
+def id_check(object_id: str, collection) -> bool:
+    """
+    Checks if object id is valid as an
+    reference in selected collection.
+
+    :param object_id: Id that is checked
+    :param collection: Collection where to check
+    :return: bool
+    """
+
+    # TODO: feature/ID-CHECK
+    #  *logic to check is id legit
+    return False
