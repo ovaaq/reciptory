@@ -21,10 +21,11 @@ test2 = {
     "child_categories": [
     ]
 }
-#settings.ingredient_category_col.add(test)
+#settings.ingredient_category_col.edit("5edb9987d678535b93caffe8", test)
+settings.ingredient_category_col.add(test)
 #settings.ingredient_category_col.delete("5eda9e829063a7b05d288778")
 #settings.ingredient_category_col.delete_all()
 
 #all = settings.ingredient_category_col.get_all()
 
-settings.ingredient_category_col.delete("5edb640fd6b3cf1a3978c8a0")
+#settings.ingredient_category_col.delete("5edb640fd6b3cf1a3978c8a0")

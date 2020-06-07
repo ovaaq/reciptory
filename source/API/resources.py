@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from json import loads
+from typing import Callable
 
 from bson.json_util import dumps
 from flask import request
@@ -34,7 +35,7 @@ def general_get(collection, singe_term, plural_term, object_id=None):
     return loads(dumps({"status": "success", "data": data}))
 
 
-def general_put(collection, content, verifier, object_id=None):
+def general_put(collection, content, verifier: Callable, object_id: str = None):
     """Add or edit an object from the database.
      Returns JSON containing information of process.
 
@@ -44,8 +45,8 @@ def general_put(collection, content, verifier, object_id=None):
     verifier -- Function that verifies sent data
     object_id -- optional. To edit specific object from the db
     """
-    tmp = verifier(content)
-    if len(tmp) < 1:
+    errors: list = verifier(content)
+    if len(errors) < 1:
         if object_id is None:
             is_success = collection.add(content)
         else:
@@ -56,7 +57,7 @@ def general_put(collection, content, verifier, object_id=None):
         else:
             abort(500, status="error", message="Internal Server Error")
     else:
-        abort(400, status="fail", errors=tmp)
+        abort(400, status="fail", errors=errors)
 
 
 def general_delete(collection, singe_term, object_id=None):

@@ -2,12 +2,10 @@
 
 from source.API.settings import Settings
 
+# RUN THIS SCRIPT TO CLEAR THE DATABASE AND GENERATE DUMMY VALUES FOR TESTING
+
 settings = Settings()
 
-settings.ingredient_col.delete_all()
-settings.ingredient_category_col.delete_all()
-settings.method_col.delete_all()
-settings.method_category_col.delete_all()
-settings.recipe_col.delete_all()
-settings.recipe_category_col.delete_all()
+settings.clear_database()
 
+settings.ingredient_category_col.dump("ingredient_category.json")
